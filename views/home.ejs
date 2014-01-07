@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Sign UP</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+	<form action="/questionsPage" method="POST">
+	<p>Welcome to HomePage</p>
+	<%= alert %>
+	<table border=1 width="100">
+	<tr><td>Select An supervisor</td></tr>
+	<tr>
+	<td>
+	<select name="selectSupervisor">
+	<p><%= supervisor.length %></p>
+	<% for(var i=0; i<supervisor.length; i++) { %>
+	<option value=<%= supervisor[i].user_id %>><%= supervisor[i].first_name %></option>
+	<% } %>
+	</select>
+	</td>
+	</tr>
+	<!--<tr><td><a href="questionsPage">Click Here to Start Quiz</a></td></tr> -->
+	<tr><td><input type="submit" value="Click Here to Start Quiz"></td></tr>
+	</table>
+	</form>
+  </body>
+</html>	

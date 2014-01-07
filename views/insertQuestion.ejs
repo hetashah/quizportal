@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Add Quiz Questions</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <form action="/insertQuestionPage" method="POST">
+	<table width="60%">
+		<br>
+		<%= alert %>
+		<p> Add Quiz Question </p>
+		<tr><td>Enter Question:</td><td><input type="text" name="question"</td></tr>
+		<tr><td>Enter Option1:</td><td><input type="text" name="option1"</td></tr>
+		<tr><td>Enter Option2:</td><td><input type="text" name="option2"</td></tr>
+		<tr><td>Enter Option3:</td><td><input type="text" name="option3"</td></tr>
+		<tr><td>Enter Option4:</td><td><input type="text" name="option4"</td></tr>
+		<tr><td>Enter Option# for Answer:</td><td><input type="text" name="answer"</td></tr>
+		<tr><td>Enter Points:<td><td><input type="text" name="points"</td></tr>
+		<tr><td><input type="submit" value="insertQuestion"></td>
+    </tr>
+	</table>
+  </form>
+  </body>
+</html>	

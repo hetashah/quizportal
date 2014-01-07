@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Sign UP</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <p>Sign Up Form</p>
+    <form name="signup" action="/signupclick" method="POST">
+    <table>
+    <tr>
+    <td>firstName:</td><td><input type="text" name="firstname"></td><br>
+    </tr>
+    <tr>	
+    <td>lastName:</td><td><input type="text" name="lastname"><br></td>
+    </tr>
+    <td>email:</td><td><input type="text" name="email"></td><br>
+    </tr>
+    <td>password:</td><td><input type="password" name="password"><br></td>
+    </tr>
+    <tr>
+    <td><input type="radio" name="role" value=0>Student<br></td>
+    <td><input type="radio" name="role" value=1>Supervisor</td>
+    </tr>
+    <tr>
+    <td><input type="submit" value="signup"></td>
+    </tr>
+    </table>
+    </form>
+  </body>
+</html>

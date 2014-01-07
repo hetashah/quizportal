@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Sign UP</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+	<p>Multiple choice question</p>
+		<form action="/answers" method="POST">
+		<% if(questions.length>0) { %>
+		<tr><td><input type="hidden" name="queslength" value="<%= questions.length %>"</td></tr>
+		<tr><td><input type="hidden" name="supervisorid" value="<%= questions[0].superv_id %>"</td></tr>
+		<% for(var i=0; i<questions.length; i++) { %>
+		<table>
+		
+		<tr><td><input type="hidden" name="hidden<%= i %>" value="<%= questions[i].question_id %>"</td></tr>
+		<tr><td><%= questions[i].question %></td></tr><br>	
+		<tr><td><input type="radio" name="question<%= i %>" value=1><%= questions[i].option1 %></td></tr>
+		<tr><td><input type="radio" name="question<%= i %>" value=2><%= questions[i].option2 %></td></tr>
+		<tr><td><input type="radio" name="question<%= i %>" value=3><%= questions[i].option3 %></td></tr>
+		<tr><td><input type="radio" name="question<%= i %>" value=4><%= questions[i].option4 %></td></tr><br>
+		<tr><td><input type="hidden" name="answer<%= i %>" value="<%= questions[i].answer %>"</td></tr>	
+		<tr><td><input type="hidden" name="points<%= i %>" value="<%= questions[i].points %>"</td></tr>		
+		</table>	
+		 <% } %>
+		<tr><td><br><input type="submit" value="Submitanswers"></td></tr>
+		<% } else { %>
+		<p> No Quiz Questions </p>
+		<% } %>
+		</form>
+		
+  </body>
+</html>
